@@ -23,10 +23,15 @@ PS C:\Users\At0m\Documents\Coding\Django Unchained> django-admin startproject Dj
 ```
 
 `manage.py` - Command-line utility for Django project administration
+
 `asgi.py` - Configuration for ASGI web servers to serve your project
+
 `settings.py` - Contains all project settings and configuration
+
 `urls.py` - URL declarations - maps URLs to views
+
 `wsgi.py` - Configuration for Web Server Gateway Interface (WSGI) web servers to serve your project
+
 `init.py` - Empty file that indicates this directory should be treated as a Python package
 
 Run server:
@@ -58,11 +63,17 @@ C:\USERS\AT0M\DOCUMENTS\CODING\DJANGO UNCHAINED\DJANGO_UNCHAINED\BLOG
 ```
 
 `admin.py` - Register models to manage them in Django's admin interface
+
 `apps.py` - Configuration settings for this specific Django application
+
 `models.py` - Define database models (tables) using Python classes
+
 `tests.py` - Write test cases for your application's functionality
+
 `views.py` - Handle web requests and return responses (controller logic)
+
 `init.py` - Marks this directory as a Python package
+
 `migrations/init.py` - Enables database migration tracking for model changes
 ## Django Routing Flow
 
@@ -623,5 +634,6 @@ For those that don't want to go the gmail route, go through a locally hosted dum
 The password reset email will then populate within the shell running the SMTP server
 
 [Video](https://www.youtube.com/watch?v=-s7e_Fy6NRU&t=45s).
+
 
 ---
