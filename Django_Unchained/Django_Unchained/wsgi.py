@@ -8,15 +8,15 @@ https://docs.djangoproject.com/en/5.2/howto/deployment/wsgi/
 """
 
 import os
-
 from django.core.wsgi import get_wsgi_application
 
 os.environ.setdefault('DJANGO_SETTINGS_MODULE', 'Django_Unchained.settings')
 
 application = get_wsgi_application()
 
-# Add this for production
+# WhiteNoise for Render
 if 'RENDER' in os.environ:
     from whitenoise import WhiteNoise
-    application = WhiteNoise(application)
+    application = WhiteNoise(application, root='/opt/render/project/src/staticfiles')
+
 
