@@ -121,13 +121,32 @@ USE_TZ = True
 
 # Static files configuration
 STATIC_URL = '/static/'
-STATIC_ROOT = os.path.join(BASE_DIR, 'staticfiles')  # Production static files
+STATIC_ROOT = os.path.join(BASE_DIR, 'staticfiles')
 STATICFILES_DIRS = [
-    os.path.join(BASE_DIR, 'blog/static'),  # Your custom static files
+    os.path.join(BASE_DIR, 'blog/static'),
 ]
 
+# Local media settings (development)
 MEDIA_ROOT = os.path.join(BASE_DIR, 'media')
 MEDIA_URL = '/media/'
+
+
+# Add this for production on Render
+if 'RENDER' in os.environ:
+    ALLOWED_HOSTS = ['*']
+    DEBUG = False
+
+    # WhiteNoise for static files
+    MIDDLEWARE.insert(1, 'whitenoise.middleware.WhiteNoiseMiddleware')
+    STATICFILES_STORAGE = 'whitenoise.storage.CompressedManifestStaticFilesStorage'
+
+    # PRODUCTION MEDIA SETTINGS FOR RENDER
+    MEDIA_ROOT = '/opt/render/project/src/media'
+    MEDIA_URL = '/media/'
+
+else:
+    ALLOWED_HOSTS = []
+    DEBUG = True
 
 CRISPY_ALLOWED_TEMPLATE_PACKS = "bootstrap4"
 CRISPY_TEMPLATE_PACK = 'bootstrap4'
@@ -148,14 +167,4 @@ EMAIL_HOST_PASSWORD = 'rvmh tpch ceio xlxc'
 
 DEFAULT_AUTO_FIELD = 'django.db.models.BigAutoField'
 
-# Add this for production on Render
-if 'RENDER' in os.environ:
-    ALLOWED_HOSTS = ['*']
-    DEBUG = False
-    # Add whitenoise for static files
-    MIDDLEWARE.insert(1, 'whitenoise.middleware.WhiteNoiseMiddleware')
-    STATICFILES_STORAGE = 'whitenoise.storage.CompressedManifestStaticFilesStorage'
-else:
-    ALLOWED_HOSTS = []
-    DEBUG = True
 
