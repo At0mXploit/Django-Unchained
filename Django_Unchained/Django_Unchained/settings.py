@@ -119,8 +119,12 @@ USE_TZ = True
 # Static files (CSS, JavaScript, Images)
 # https://docs.djangoproject.com/en/5.2/howto/static-files/
 
-STATIC_URL = 'static/'
-STATIC_ROOT = os.path.join(BASE_DIR, 'staticfiles')  
+# Static files configuration
+STATIC_URL = '/static/'
+STATIC_ROOT = os.path.join(BASE_DIR, 'staticfiles')  # Production static files
+STATICFILES_DIRS = [
+    os.path.join(BASE_DIR, 'blog/static'),  # Your custom static files
+]
 
 MEDIA_ROOT = os.path.join(BASE_DIR, 'media')
 MEDIA_URL = '/media/'
@@ -154,3 +158,4 @@ if 'RENDER' in os.environ:
 else:
     ALLOWED_HOSTS = []
     DEBUG = True
+
