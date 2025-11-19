@@ -1,4 +1,35 @@
 # Django Unchained
+
+A blogging platform built with Django where users can share posts and connect with others.
+## Features
+- Create, read, update and delete blog posts
+- User authentication and registration
+- Password reset via email
+- Profile picture uploads
+- User profiles and account management
+- Pagination Support
+- Update your profile information
+- Admin Dashboard
+## Demo
+
+<img width="1365" height="643" alt="2025-11-19_22-59_1" src="https://github.com/user-attachments/assets/b6cca43d-6184-4ff7-be61-695e22c88124" />
+
+<img width="1365" height="636" alt="2025-11-19_22-24_1" src="https://github.com/user-attachments/assets/09f11912-7955-4465-93f5-109897b7b089" />
+
+<img width="1365" height="644" alt="2025-11-19_22-24" src="https://github.com/user-attachments/assets/b7c077e7-3d9a-4912-8504-ee3327aba400" />
+
+<img width="1365" height="642" alt="2025-11-19_22-59" src="https://github.com/user-attachments/assets/243d22d3-c1a4-445e-9377-fe394907283c" />
+
+<img width="1365" height="639" alt="2025-11-19_23-00" src="https://github.com/user-attachments/assets/d43d9ef2-04c6-44f6-98bd-5b0785be486a" />
+
+<img width="1365" height="641" alt="2025-11-19_23-09" src="https://github.com/user-attachments/assets/2a42dc6e-0e2b-48d3-aa67-1d297fafc368" />
+
+<img width="1365" height="651" alt="2025-11-19_22-58" src="https://github.com/user-attachments/assets/f4ff3a6e-c882-4f5b-8aa8-f16ee5180e10" />
+
+<img width="1365" height="646" alt="2025-11-19_23-01" src="https://github.com/user-attachments/assets/9aa4079a-8496-4293-89e4-7df61593d313" />
+
+<img width="813" height="546" alt="2025-11-19_23-01_1" src="https://github.com/user-attachments/assets/94befe12-1ddf-4a8a-badd-bc914cc2c8fd" />
+
 ## Run Project
 
 ```bash
@@ -637,3 +668,4 @@ The password reset email will then populate within the shell running the SMTP se
 
 
 ---
+
